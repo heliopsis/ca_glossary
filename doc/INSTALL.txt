@@ -1,0 +1,32 @@
+CA Glossary
+
+
+Requirements:
+============
+- eZ Publish 4.x
+
+Installing:
+==========
+1) Extract the extension in the eZ Publish extension folder
+
+2) Activate the extension in your site.ini (ActiveExtensions[]=ca_glossary) or in the extension menu of eZ back office
+
+4) Create a new content class for your glossary items
+      There must be at least the following attributes : Title (type : text line) and Definition (type: text bloc)
+      You can give whatever identifier you want as you can change it in glossary.ini
+
+3) Go to settings folder and edit glossary.ini
+      Change the node_id of the object that contains glossary items
+      Change information of content class (created on step 4)
+      Check authorized tags
+
+4) If you are using the ezwebin mechanism to load your CSS files then ce_glossary.css will be automatically added thanks to these lines in design.ini :
+        [StylesheetSettings]
+        CSSFileList[]=ca_glossary.css
+
+    Otherwise, you'll have to load the file in your pagelayout or add css rules in your own css file.
+
+5) Finally, the extension override template loaded when {attribute_view_gui attribute="your_xml_text"} is called.
+    If you want to call the operator on a specific text you can simply call : {ca_glossary("your xml text")}
+
+    NB : You can change the ca_glossary.tpl to adapt the text replacement of each items.

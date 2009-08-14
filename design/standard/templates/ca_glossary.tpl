@@ -1,0 +1,1 @@
+<a class="ca_glossary" href={concat($glossaryUrl,'#',$title)|ezurl}>{$title|downcase}<span>{$definition}</span></a>

@@ -1,0 +1,27 @@
+a.ca_glossary {
+    border-bottom:1px dotted;
+    position:relative;
+    text-decoration:none;
+}
+a.ca_glossary span {
+   display: none;
+}
+a.ca_glossary:hover {
+   background: none;
+   z-index: 500;
+   cursor: help;
+}
+a.ca_glossary:hover span {
+   display: block;
+   width: 200px;
+   position: absolute;
+   top: 15px;
+   left: 20px;
+   background: #F5F9E6;
+   color: #367E95;
+   padding: 3px;
+   font-size: 90%;
+   border: 1px solid #367E95;
+   border-left: 4px solid #367E95;
+   text-decoration:none;
+}
