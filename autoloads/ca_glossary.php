@@ -146,7 +146,7 @@ class CAGlossary
 
             $matchArray[] = preg_quote( $title, '/' );
 
-            $tpl = templateInit();
+            $tpl = eZTemplate::factory();
             $tpl->setVariable( 'title', $title );
             $tpl->setVariable( 'glossaryUrl', $glossaryUrl );
             $tpl->setVariable( 'definition', $definition );
